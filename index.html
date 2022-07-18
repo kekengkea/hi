@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 90%;
+            background-color: bisque;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header h1{
+            width: 10%;
+            float: left;
+        }
+        header h1 a{
+            display: block;
+            color: blueviolet;
+            line-height: 100px;
+            text-decoration: none;
+        }
+        header nav{
+            width: 60%;
+            float: right;
+            
+        }
+        header::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        header nav ul{
+            list-style: none;
+        }
+
+        header nav ul li{
+            width: 25%;
+            float: left;
+        }
+        header nav ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        header nav ul li a{
+            display: block;
+            color: blueviolet;
+            line-height: 100px;
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1><a href="#">메인로고</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">대메뉴1</a></li>
+                <li><a href="#">대메뉴1</a></li>
+                <li><a href="#">대메뉴1</a></li>
+                <li><a href="#">대메뉴1</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
