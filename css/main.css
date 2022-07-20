@@ -2,3 +2,50 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header{
+    width: 20%;
+    text-align: center;
+}
+header h1{}
+header h1 a{
+    display: block;
+    background-color: #333;
+    color: #fff;
+    line-height: 100px;
+}
+header nav{}
+header .depth01{}
+header .depth01 > li{
+    position: relative;
+}
+header .depth01 > li > a{
+    display: block;
+    background-color: #333;
+    color: #fff;
+    line-height: 100px;
+    border-top: solid 1px #fff;
+}
+header .depth02{
+    display: none;
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    top:0;
+}
+header .depth02 li{}
+header .depth02 li a{
+    display: block;
+    background-color: #777;
+    color: #fff;
+    line-height: 50px;
+    border-top: solid 1px #333;
+}
+header .depth01 li:hover .depth02{
+    display: block;
+}
