@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#wrap{
+    background-color: #cc92c0;
+    text-align: center;
+    position: relative;
+}
+#wrap .container{
+    width: 1200px;
+    margin: 0 auto;
+}
+#wrap .container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#wrap .container h1{
+    float: left;
+    width: 25%;
+}
+#wrap .container h1 a{
+    display: block;
+    color: #0c1935;
+    line-height: 60px;
+}
+#wrap .container nav{
+    float: right;
+    width: 71%;
+}
+#wrap .container .depth01{}
+#wrap .container .depth01::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#wrap .container .depth01 > li{
+    float: left;
+    width: 25%;
+    position: relative;
+}
+#wrap .container .depth01 > li > a{
+    display: block;
+    color: #0c1935;
+    line-height: 60px;
+}
+#wrap .container .depth02{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+    z-index: 30;
+}
+#wrap .container .depth02 li{}
+#wrap .container .depth02 li a{
+    display: block;
+    background-color: #cc92c0;
+    color: #0c1935;
+    line-height: 60px;
+}
+.fake{
+    background-color: #cc92c0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+    z-index: 1;
+}
+#wrap .container .depth01:hover .depth02{
+    height: 300px;
+}
+#wrap .container nav:hover + .fake{
+    height: 300px;
+}
+#wrap .container .depth01 > li:hover > a{
+    background-color: #0c1935;
+    color: #cc92c0;
+}
+#wrap .container .depth02 li:hover a{
+    background-color: #0c1935;
+    color: #cc92c0;
+}

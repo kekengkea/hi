@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #999;
+}
+header h1{
+    float: left;
+    width: 25%;
+}
+header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+header h1 a{
+    display: block;
+    color: #ffff;
+    line-height: 100px;
+}
+header nav{
+    float: right;
+    width: 65%;
+}
+header .depth01{}
+header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+header .depth01 > li{
+    float: left;
+    width: 25%;
+    position: relative;
+}
+header .depth01 > li > a{
+    display: block;
+    color: #ffff;
+    line-height: 100px;
+}
+header .depth02{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: 0.7s;
+}
+header .depth02 li{}
+header .depth02 li a{
+    display: block;
+    background-color: #999;
+    color: #ffff;
+    line-height: 100px;
+}
+header .depth01:hover .depth02{
+    height: 500px;
+}
+header .depth01 > li:hover > a{
+    background-color: #ffff;
+    color: #999;
+}
+header .depth02 li:hover a{
+    background-color: #ffff;
+    color: #999;
+}
