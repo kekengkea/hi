@@ -5,55 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main1.css">
+    <style>
+        html{
+            font-size: 16px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,dl{
+            list-style: none;
+        }
+        #wrap{
+            width: 40%;
+            text-align: center;
+            background-color: #89f0f0;
+            position: relative;
+        }
+        #wrap::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #wrap > li{
+            float: left;
+            width: 50%;
+        }
+        #wrap > li input{
+            display: none;
+        }
+        #wrap > li label{
+            display: block;
+            color: #c44e93;
+            line-height: 50px;
+
+        }
+        #wrap .box{
+            position: absolute;
+            left: 0;
+            background-color: #c44e93;
+            color: #89f0f0;
+            width: 100%;
+            top: 100%;
+            height: 400px;
+            z-index: 1;
+            font-size: 2rem;
+        }
+        #wrap li input:checked ~ .box{
+            z-index: 99;
+        }
+        #wrap li input:checked ~ label{
+            background-color: #412f83;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1><a href="#">메인로고</a></h1>
-        <nav>
-            <ul class="depth01">
-                <li>
-                    <a href="#">대메뉴1</a>
-                    <ul class="depth02">
-                        <li><a href="#">슈메뉴1</a></li>
-                        <li><a href="#">슈메뉴2</a></li>
-                        <li><a href="#">슈메뉴3</a></li>
-                        <li><a href="#">슈메뉴4</a></li>
-                        <li><a href="#">슈메뉴5</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">대메뉴2</a>
-                    <ul class="depth02">
-                        <li><a href="#">슈메뉴1</a></li>
-                        <li><a href="#">슈메뉴2</a></li>
-                        <li><a href="#">슈메뉴3</a></li>
-                        <li><a href="#">슈메뉴4</a></li>
-                        <li><a href="#">슈메뉴5</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">대메뉴3</a>
-                    <ul class="depth02">
-                        <li><a href="#">슈메뉴1</a></li>
-                        <li><a href="#">슈메뉴2</a></li>
-                        <li><a href="#">슈메뉴3</a></li>
-                        <li><a href="#">슈메뉴4</a></li>
-                        <li><a href="#">슈메뉴5</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">대메뉴4</a>
-                    <ul class="depth02">
-                        <li><a href="#">슈메뉴1</a></li>
-                        <li><a href="#">슈메뉴2</a></li>
-                        <li><a href="#">슈메뉴3</a></li>
-                        <li><a href="#">슈메뉴4</a></li>
-                        <li><a href="#">슈메뉴5</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <ul id="wrap">
+        <li>
+            <input type="radio" name="check" id="check" checked>
+            <label for="check">공지사항</label>
+            <div class="box">공지사항 영역입니다.</div>
+        </li> 
+        <li>
+            <input type="radio" name="check" id="bord" >
+            <label for="bord">게시판</label>
+            <div class="box">게시판 영역입니다.</div>
+        </li>
+    </ul>
 </body>
 </html>
